@@ -36,13 +36,6 @@ public class MainActivity extends AppCompatActivity {
                                     .commit();
                         }
                         return true;
-                    case R.id.setting_menu:
-                        if (savedInstanceState == null) {
-                            getSupportFragmentManager().beginTransaction()
-                                    .replace(R.id.container, setting.newIns())
-                                    .commit();
-                        }
-                        return true;
                     case R.id.film_menu:
                         if (savedInstanceState == null) {
                             getSupportFragmentManager().beginTransaction()

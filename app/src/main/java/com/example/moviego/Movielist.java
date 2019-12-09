@@ -67,7 +67,7 @@ public class Movielist extends Fragment {
                 }
             }
 
-            // tes
+            // Git add .
 
             @Override
             public void onFailure(Call<DataMovie> call, Throwable t) {

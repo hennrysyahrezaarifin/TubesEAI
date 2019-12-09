@@ -13,10 +13,5 @@
         android:title="Movie"
         app:showAsAction="always"
         />
-    <item
-        android:id="@+id/setting_menu"
-        android:icon="@drawable/setting"
-        android:title="Setting"
-        app:showAsAction="always"
-        />
+
 </menu>
