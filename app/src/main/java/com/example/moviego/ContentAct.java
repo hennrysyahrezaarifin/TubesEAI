@@ -1,9 +1,13 @@
 package com.example.moviego;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -17,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.moviego.model.Articles;
 import com.example.moviego.model.DataNews;
 import com.example.moviego.model.NewsResponse;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.ArrayList;
 
@@ -44,6 +49,7 @@ public class ContentAct extends Fragment {
         // Inflate the layout for this fragment
         RetrofitCl.clearClient();
 
+
         return inflater.inflate(R.layout.fragment_content, container, false);
     }
 
@@ -56,6 +62,7 @@ public class ContentAct extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         recyclerView.setAdapter(newsAdapter);
         recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL));
+        setHasOptionsMenu(true);
 
         API moviedetails = RetrofitCl.getRetrofit(Const.apinews).create(API.class);
         final Call<DataNews> cMovie = moviedetails.News("id", "entertainment", Const.apiken);
@@ -74,5 +81,20 @@ public class ContentAct extends Fragment {
                 Log.d("ROWITS", "onFailure: "+t.getLocalizedMessage());
             }
         });
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        inflater.inflate(R.menu.rate, menu);
+        super.onCreateOptionsMenu(menu,inflater);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==R.id.menurate){
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getContext(), LoginActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

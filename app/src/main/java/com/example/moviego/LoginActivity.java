@@ -187,7 +187,7 @@ int RC_SIGN_IN = 0;
         // the GoogleSignInAccount will be non-null.
 
         super.onStart();
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+            GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         if(account != null) {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
         }

@@ -3,6 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/menurate"
-        android:title="Rate"
+        android:title="Log Out"
         app:showAsAction="always" />
 </menu>
