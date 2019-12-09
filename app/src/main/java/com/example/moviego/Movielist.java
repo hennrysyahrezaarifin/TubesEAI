@@ -67,6 +67,8 @@ public class Movielist extends Fragment {
                 }
             }
 
+            // tes
+
             @Override
             public void onFailure(Call<DataMovie> call, Throwable t) {
                 Log.d("ROWITS", "onFailure: "+t.getLocalizedMessage());
