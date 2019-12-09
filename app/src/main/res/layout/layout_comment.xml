@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_comment">
+
+    <ImageView
+        android:id="@+id/imagePoster"
+        android:layout_width="156dp"
+        android:layout_height="196dp"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/movie" />
+
+</LinearLayout>
