@@ -7,10 +7,10 @@
 
     <ImageView
         android:id="@+id/imagePoster"
-        android:layout_width="156dp"
-        android:layout_height="196dp"
-        android:layout_marginBottom="16dp"
-        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_margin="10dp"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/movie" />
 
 </LinearLayout>

@@ -7,13 +7,13 @@
     tools:context=".Movielist">
 
     <TextView
-        android:layout_margin="8dp"
-        android:gravity="center_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="See Whats popular"
-        android:textStyle="bold"
-        android:textSize="18sp"/>
+        android:layout_margin="8dp"
+        android:gravity="center_horizontal"
+        android:text="Now Playing in Theatres"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_marginTop="8dp"
