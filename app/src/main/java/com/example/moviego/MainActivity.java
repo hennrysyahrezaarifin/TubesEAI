@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, ContentAct.newIns())
+                    .replace(R.id.container, Movielist.newIns())
                     .commit();
         }
 
@@ -29,17 +29,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
-                    case R.id.home_menu:
-                        if (savedInstanceState == null) {
-                            getSupportFragmentManager().beginTransaction()
-                                    .replace(R.id.container, ContentAct.newIns())
-                                    .commit();
-                        }
-                        return true;
                     case R.id.film_menu:
                         if (savedInstanceState == null) {
                             getSupportFragmentManager().beginTransaction()
                                     .replace(R.id.container, Movielist.newIns())
+                                    .commit();
+                        }
+                        return true;
+                    case R.id.home_menu:
+                        if (savedInstanceState == null) {
+                            getSupportFragmentManager().beginTransaction()
+                                    .replace(R.id.container, ContentAct.newIns())
                                     .commit();
                         }
                         return true;

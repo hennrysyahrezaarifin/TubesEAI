@@ -65,7 +65,7 @@ public class ContentAct extends Fragment {
         setHasOptionsMenu(true);
 
         API moviedetails = RetrofitCl.getRetrofit(Const.apinews).create(API.class);
-        final Call<DataNews> cMovie = moviedetails.News("id", "entertainment", Const.apiken);
+        final Call<DataNews> cMovie = moviedetails.News(Const.apiken, "");
         cMovie.enqueue(new Callback<DataNews>() {
             @Override
             public void onResponse(Call<DataNews> call, Response<DataNews> response) {

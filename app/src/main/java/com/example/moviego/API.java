@@ -10,13 +10,13 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface API {
-    @GET("top-headlines")
-    Call<DataNews> News (@Query("country") String _id,
-                         @Query("category") String category,
-                         @Query("apiKey") String apiKey
+    @GET("everything")
+    Call<DataNews> News (
+                         @Query("apiKey") String apiKey,
+                         @Query("q") String query
                      );
 
-    @GET("movie/popular")
+    @GET("movie/now_playing")
     Call<DataMovie> Movie (@Query("page") String page);
 
 }

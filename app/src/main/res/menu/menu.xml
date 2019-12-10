@@ -2,16 +2,17 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home_menu"
-        android:icon="@drawable/home"
-        android:title="Home"
-        app:showAsAction="always"
-        />
-    <item
         android:id="@+id/film_menu"
         android:icon="@drawable/movie"
         android:title="Movie"
         app:showAsAction="always"
         />
+    <item
+        android:id="@+id/home_menu"
+        android:icon="@drawable/home"
+        android:title="Home"
+        app:showAsAction="always"
+        />
+
 
 </menu>

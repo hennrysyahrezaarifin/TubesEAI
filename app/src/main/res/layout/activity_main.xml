@@ -12,14 +12,14 @@
         android:layout_above="@id/moviego"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
         android:id="@+id/moviego"
-        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
         android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="76dp"
         app:menu="@menu/menu"
-        />
+        tools:layout_editor_absoluteY="76dp" />
 
 </RelativeLayout>
